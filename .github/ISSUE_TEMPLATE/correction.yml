@@ -1,0 +1,45 @@
+name: Correction
+description: Report something in the public matrix or guidance that appears wrong.
+title: "Correction: "
+labels: ["feedback", "correction", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this for public, already-triaged corrections. For private feedback, use https://willitstick.fyi/feedback.
+  - type: input
+    id: page
+    attributes:
+      label: Page
+      description: Link to the Will It Stick page, matrix cell, or detail view.
+      placeholder: https://willitstick.fyi/p/pla/bambu-textured-pei
+    validations:
+      required: true
+  - type: input
+    id: pairing
+    attributes:
+      label: Material and plate
+      placeholder: PLA on Bambu Textured PEI
+    validations:
+      required: false
+  - type: textarea
+    id: current
+    attributes:
+      label: What appears wrong?
+      description: Quote or summarize the current result, caveat, or copy.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Suggested correction
+      description: What should it say or show instead?
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence or source
+      description: Link manufacturer docs, test evidence, or prior discussion if available.
+    validations:
+      required: false

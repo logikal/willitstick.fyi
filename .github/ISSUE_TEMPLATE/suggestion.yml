@@ -1,0 +1,36 @@
+name: Suggestion
+description: Suggest a public improvement for Will It Stick.
+title: "Suggestion: "
+labels: ["feedback", "suggestion", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this for public, already-triaged suggestions. For private feedback, use https://willitstick.fyi/feedback.
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Suggestion
+      description: What should change or be added?
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why this helps
+      description: Who benefits, and what problem does it solve?
+    validations:
+      required: true
+  - type: input
+    id: page
+    attributes:
+      label: Related page
+      placeholder: https://willitstick.fyi/matrix
+    validations:
+      required: false
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes or examples
+    validations:
+      required: false
